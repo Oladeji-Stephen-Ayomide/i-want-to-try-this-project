@@ -24,6 +24,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0.5em;
+    padding: 1em 5em;
     margin: 5px auto;
 }
 
@@ -34,6 +35,11 @@ body {
     font-family: "Barlow Semi Condensed";
     line-height: 2em;
     border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.container:hover {
+    box-shadow: 2px 2px 20px blue;
 }
 
 .container__header {
@@ -92,7 +98,7 @@ small {
 .container:first-child {
     background-image: url(/bg-pattern-quotation.svg);
     background-repeat: no-repeat;
-    background-position-x: 35em;
+    background-position-x: 25rem;
     grid-column: 1 / 3;
     order: -3;
 }
@@ -173,6 +179,10 @@ small {
 
 
 @media (min-width: 50px) and (max-width: 700px) {
+    body {
+        background-image: linear-gradient(rebeccapurple, gray);
+    }
+
     .wrapper {
         max-width: auto;
         display: grid;
